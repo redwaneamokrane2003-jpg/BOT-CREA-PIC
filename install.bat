@@ -46,7 +46,7 @@ if not "%INSTALL_EXIT%"=="0" (
 )
 
 :end
-pause
+if not "%BOTCREAPIC_FROM_RUN%"=="1" pause
 exit /b %INSTALL_EXIT%
 
 :detect_py310

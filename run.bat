@@ -9,7 +9,9 @@ if exist ".venv\Scripts\python.exe" (
 
 echo Environnement .venv absent.
 echo Lancement de l'installation initiale...
+set "BOTCREAPIC_FROM_RUN=1"
 call install.bat
+set "BOTCREAPIC_FROM_RUN="
 if errorlevel 1 goto :install_failed
 
 if exist ".venv\Scripts\python.exe" (
