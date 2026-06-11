@@ -14,10 +14,9 @@ Le profil par defaut est calibre pour un PC portable type **Acer Nitro V15 / RTX
 
 ## Installation en 2 commandes
 
-Remplace `TON_COMPTE` et `TON_REPO` par le nom de ton repo GitHub.
-
 ```bash
-git clone https://github.com/TON_COMPTE/TON_REPO.git && cd TON_REPO
+git clone https://github.com/redwaneamokrane2003-jpg/BOT-CREA-PIC.git
+cd BOT-CREA-PIC
 ```
 
 Windows:
@@ -140,4 +139,3 @@ Si les checkpoints, Python 3.10, CUDA ou la VRAM ne sont pas disponibles, l'outi
 - MoCha: verifier la licence du repo et du checkpoint `Orange-3DV-Team/MoCha`.
 - Wan2.1: verifier la licence du modele `Wan-AI/Wan2.1-T2V-14B`.
 - Utilise l'outil seulement avec les droits/consentements necessaires.
-
