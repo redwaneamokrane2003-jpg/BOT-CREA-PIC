@@ -103,7 +103,9 @@ def run_setup(download_models: bool, skip_install: bool) -> None:
         command.append("--download-models")
     if skip_install:
         command.append("--skip-install")
-    run_command(command, check=False)
+    exit_code = run_command(command, check=False)
+    if exit_code != 0:
+        raise SystemExit(exit_code)
 
 
 def print_runtime_note() -> None:
@@ -111,7 +113,7 @@ def print_runtime_note() -> None:
     if sys.version_info[:2] != (3, 10):
         print(
             f"Attention: Python {version} detecte. MoCha recommande Python 3.10. "
-            "Pour un repo GitHub plug-and-play, lance avec py -3.10 run.py --setup --download-models.",
+            "Sur Windows, lance plutot run.bat pour installer Python 3.10 automatiquement si besoin.",
             flush=True,
         )
 

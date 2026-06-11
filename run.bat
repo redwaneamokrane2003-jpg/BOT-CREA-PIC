@@ -7,14 +7,19 @@ if exist ".venv\Scripts\python.exe" (
   goto :end
 )
 
-where py >nul 2>nul
-if %errorlevel% equ 0 (
-  py -3.10 run.py
+echo Environnement .venv absent.
+echo Lancement de l'installation initiale...
+call install.bat
+if errorlevel 1 goto :install_failed
+
+if exist ".venv\Scripts\python.exe" (
+  ".venv\Scripts\python.exe" run.py
   goto :end
 )
 
-python run.py
+:install_failed
+echo Installation incomplete. Corrige l'erreur affichee puis relance run.bat.
+goto :end
 
 :end
 pause
-

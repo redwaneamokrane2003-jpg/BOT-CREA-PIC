@@ -12,39 +12,62 @@ Le profil par defaut est calibre pour un PC portable type **Acer Nitro V15 / RTX
 
 > Important: MoCha/Wan2.1 14B reste tres lourd. Une RTX 3050 laptop peut echouer en VRAM meme avec ce profil. L'outil est pret a lancer MoCha, mais il ne transforme pas une petite carte en GPU 24 GB.
 
-## Installation en 2 commandes
+## Installation Windows plug-and-play
+
+Depuis PowerShell:
+
+```powershell
+git clone https://github.com/redwaneamokrane2003-jpg/BOT-CREA-PIC.git
+cd BOT-CREA-PIC
+.\run.bat
+```
+
+`run.bat` fait le reste:
+
+- detecte l'environnement `.venv`
+- lance `install.bat` au premier demarrage
+- installe Python 3.10 avec `winget` si le PC ne l'a pas
+- telecharge les modeles
+- lance l'interface locale
+
+Important: si tu es deja dans `C:\Users\pierr\BOT-CREA-PIC`, ne refais pas `cd BOT-CREA-PIC`. Lance directement:
+
+```powershell
+.\run.bat
+```
+
+## Installation Linux
 
 ```bash
 git clone https://github.com/redwaneamokrane2003-jpg/BOT-CREA-PIC.git
 cd BOT-CREA-PIC
+python3.10 run.py --setup --download-models
 ```
+
+## Relancer plus tard
 
 Windows:
 
-```bat
-py -3.10 run.py --setup --download-models
+```powershell
+.\run.bat
 ```
 
 Linux:
 
 ```bash
-python3.10 run.py --setup --download-models
-```
-
-Ensuite, pour relancer plus tard:
-
-```bash
-python run.py
-```
-
-Ou avec les scripts:
-
-```bat
-run.bat
-```
-
-```bash
 ./run.sh
+```
+
+## Commande avancee si Python 3.10 est deja installe
+
+Windows:
+
+```powershell
+py -3.10 run.py --setup --download-models
+```
+
+```bash
+python3.10 run.py --setup --download-models
 ```
 
 ## Ce que fait `run.py --setup --download-models`
