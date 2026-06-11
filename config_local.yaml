@@ -1,0 +1,13 @@
+mocha_repo_dir: ./MoCha
+checkpoints_dir: ./checkpoints
+wan_dir: ./checkpoints/Wan2.1-T2V-14B
+mocha_ckpt_path: ./checkpoints/MoCha/preview/step18500.ckpt
+mocha_ckpt_fallback: ./checkpoints/step18500.ckpt
+uploads_dir: ./uploads
+outputs_dir: ./outputs
+temp_dir: ./temp
+target_profile: acer_nitro_v15_rtx3050
+target_resolution: 416x240
+target_frames: 17
+target_preset: Preview rapide
+target_low_vram: true
